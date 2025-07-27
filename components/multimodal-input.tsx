@@ -197,13 +197,14 @@ function PureMultimodalInput({
     <div className="relative w-full flex flex-col gap-4">
       <AnimatePresence>
         {!isAtBottom && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-            className="absolute left-1/2 bottom-28 -translate-x-1/2 z-50"
-          >
+          <div suppressHydrationWarning>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+              className="absolute left-1/2 bottom-28 -translate-x-1/2 z-50"
+            >
             <Button
               data-testid="scroll-to-bottom-button"
               className="rounded-full"
@@ -217,6 +218,7 @@ function PureMultimodalInput({
               <ArrowDown />
             </Button>
           </motion.div>
+          </div>
         )}
       </AnimatePresence>
 

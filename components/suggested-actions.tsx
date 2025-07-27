@@ -30,8 +30,8 @@ function PureSuggestedActions({
     },
     {
       title: 'What homework was assigned',
-      label: `in the last class`,
-      action: `What homework was assigned in the last class`,
+      label: `in the last class?`,
+      action: `What homework was assigned in the last class?`,
     },
     {
       title: 'When is my Capstone Project', 
